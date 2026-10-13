@@ -1,0 +1,31 @@
+const monngoose = require("mongoose");
+
+const doctorSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    salary: {
+      type: String,
+      required: true,
+    },
+    qualification: {
+      type: String,
+      required: true,
+    },
+    experienceInYears: {
+      type: Number,
+      required: true,
+    },
+    worksInHospitals: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        reqf:"Hospital"
+      },
+    ],
+  },
+  { timestamps: true },
+);
+
+export const Doctor = mongoose.model("Doctor", doctorSchema);
