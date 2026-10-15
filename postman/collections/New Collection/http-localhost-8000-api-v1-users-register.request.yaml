@@ -1,0 +1,36 @@
+$kind: http-request
+name: http://localhost:8000/api/v1/users/register
+description: ""
+url: http://localhost:8000/api/v1/users/register
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: fullName
+      value: Abhishek
+      disabled: false
+    - type: text
+      key: username
+      value: abhishek123
+      disabled: false
+    - type: text
+      key: email
+      value: abhishek@example.com
+      disabled: false
+    - type: text
+      key: password
+      value: abhishek123
+      disabled: false
+    - type: file
+      key: avatar
+      src:
+        - postman-cloud:///1f1c8141-8b91-4580-a91e-14699a6f0783
+      disabled: false
+    - type: file
+      key: coverImage
+      src:
+        - postman-cloud:///1f1663eb-edd8-44b0-b0fc-489d673dc67b
+      description: ""
+      disabled: false
+order: 1000
