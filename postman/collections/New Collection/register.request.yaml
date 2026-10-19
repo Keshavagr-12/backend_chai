@@ -1,7 +1,6 @@
 $kind: http-request
-name: http://localhost:8000/api/v1/users/register
 description: ""
-url: http://localhost:8000/api/v1/users/register
+url: "{{server}}/users/register"
 method: POST
 body:
   type: formdata
